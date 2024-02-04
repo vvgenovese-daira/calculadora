@@ -6,14 +6,14 @@ import (
 	"net/http"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(w, "hola recibida en handler")
-	fmt.Fprint(w, "hola, desde servidor goland")
-}
-
 func main() {
 	// Configurar rutas
 	http.HandleFunc("/test", handler)
+	http.HandleFunc("/sumar", Sumar)
+	http.HandleFunc("/restar", Restar)
+	http.HandleFunc("/multiplicar", Multiplicar)
+	http.HandleFunc("/dividir", Dividir)
+	http.HandleFunc("/historial", HistorialHandler)
 
 	// servidor
 	port := 8000
