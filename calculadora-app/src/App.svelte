@@ -57,7 +57,7 @@
 <!-- componente-->
 <div>
 	<input bind:value={inputValue} class="p-2 mb-4" />
-	<BotonesNum on:click={handleButtonClick} />
+	<BotonesNum on:Buttonclick={handleButtonClick} />
 	<div class="p-2 mt-4 bg-black text-white">
 		{#if error}
 		{error}
