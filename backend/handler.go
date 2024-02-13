@@ -8,6 +8,5 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(w, "hola recibida en handler")
 	fmt.Fprint(w, "hola, desde servidor goland")
 }

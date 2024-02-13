@@ -8,7 +8,6 @@ import (
 	"strconv" //convercion de tipo de datos
 )
 
-// num12 es un nuevo tipo basado en float64
 type num12 float64
 
 var historial []string //slide para almacenar el historial de operaciones
@@ -46,7 +45,7 @@ func operacion(w http.ResponseWriter, r *http.Request, op func(num12, num12) num
 		return
 	}
 
-	resultado := op(num12(10), num12(valor)) //esto es una prueba
+	resultado := op(num12(valor), num12(valor)) //esto es una prueba
 	fmt.Fprintf(w, "%s: %.2f\n", operador, resultado)
 
 	historial = append(historial, fmt.Sprintf("%s %.2f = %.2f", operador, num12(10), resultado))
